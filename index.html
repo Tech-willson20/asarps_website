@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | A-Sarps Pharmacy &amp; Cosmetics Limited</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<style>
+/* Home-page-only styles */
+.topbar .sep{opacity:.4;margin:0 .7rem}
+.navbar .btn-brand{background:var(--maroon)}
+.navbar .btn-brand:hover{background:var(--red-dark)}
+.hero2{position:relative;overflow:hidden;background:linear-gradient(90deg,#fff 40%,#f6e9e9);min-height:420px}
+.hero2::after{content:"";position:absolute;right:-140px;top:-40px;width:560px;height:560px;border-radius:50%;border:70px solid var(--red);border-left-color:transparent;border-bottom-color:transparent;transform:rotate(15deg);opacity:.9;pointer-events:none}
+.hero2 .container{position:relative;z-index:2}
+.eyebrow{font-size:.68rem;font-weight:600;color:var(--red);letter-spacing:.02em;text-transform:uppercase;margin-bottom:.8rem}
+.hero2 h1{font-size:2.7rem;font-weight:600;line-height:1.15;margin-bottom:1.2rem}
+.hero2 h1 span{display:block;color:var(--maroon)}
+.hero2 p.lead-s{font-size:.85rem;color:var(--muted);max-width:420px;margin-bottom:1.6rem}
+.hero2 .btn-brand{background:var(--maroon)}
+.hero2 .btn-outline-brand{border-color:#d9c3c5;color:var(--maroon)}
+.hero-img{height:420px;display:flex;align-items:stretch;justify-content:center;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.float-card{background:#fff;border-radius:14px;box-shadow:0 12px 34px rgba(0,0,0,.14);padding:.6rem 1.4rem;position:relative;z-index:3}
+.float-card .row-i{display:flex;align-items:center;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.float-card .row-i:last-child{border:0}
+.icon-c{flex:0 0 52px;height:52px;border-radius:50%;background:var(--tint);color:var(--red);display:grid;place-items:center;font-size:1.4rem}
+.float-card span.t{font-size:.72rem;font-weight:600;line-height:1.4}
+.feature-strip{background:#fbeeee;border-radius:8px;padding:1.2rem .5rem;margin-top:1.8rem}
+.feature-strip .f{display:flex;align-items:center;gap:.8rem;padding:.2rem 1rem;height:100%}
+.feature-strip .col-lg-3+.col-lg-3 .f{border-left:1px solid #e6cfd1}
+.feature-strip .icon-c{background:#fff;border:1px solid var(--red);width:46px;height:46px;flex-basis:46px;font-size:1.2rem}
+.feature-strip h6{font-size:.72rem;font-weight:600;margin:0 0 .15rem}
+.feature-strip p{font-size:.64rem;color:var(--muted);margin:0}
+.title-c{text-align:center;font-weight:600;font-size:1.25rem}
+.title-c::after{content:"";display:block;width:36px;height:3px;background:var(--red);margin:.6rem auto 0}
+.svc{display:flex;gap:1rem;background:#fff;border:1px solid var(--line);border-radius:6px;padding:1.4rem;height:100%;box-shadow:0 6px 18px rgba(125,11,20,.06)}
+.svc .icon-c{flex:0 0 60px;height:60px;font-size:1.6rem}
+.svc h5{font-size:.85rem;font-weight:600;margin-bottom:.8rem}
+.svc p{font-size:.7rem;color:var(--muted);line-height:1.8}
+.svc a{font-size:.7rem;font-weight:600;color:var(--maroon)}
+.stats{background:var(--maroon);color:#fff;border-radius:8px;padding:1.6rem .5rem}
+.stats .s{text-align:center;padding:.3rem .5rem;height:100%}
+.stats .col-6+.col-6 .s,.stats .col-lg-2+.col-lg-2 .s{border-left:1px solid rgba(255,255,255,.2)}
+.stats i{font-size:1.9rem;opacity:.9}
+.stats .n{font-size:1.6rem;font-weight:700;line-height:1.3}
+.stats .l{font-size:.72rem;opacity:.9;line-height:1.3}
+.partner{background:#fff;border:1px solid var(--line);border-radius:6px;height:98px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:700;color:var(--maroon);box-shadow:0 6px 16px rgba(125,11,20,.05);padding:.4rem}
+.partner small{font-size:.58rem;color:var(--muted);font-weight:500}
+.about-s{background:#fcf3f3;padding:2.5rem 0}
+.about-img{border-radius:8px;min-height:230px;height:100%;background:linear-gradient(135deg,#dfe7ee,#b9c7d3 55%,#c8102e 55%,#7d0b14);display:grid;place-items:center;color:#fff;font-size:4rem;box-shadow:0 10px 26px rgba(0,0,0,.12)}
+.about-img img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.about-s h2{font-size:1.4rem;font-weight:600;margin-bottom:.8rem}
+.about-s p{font-size:.75rem;color:var(--muted);max-width:420px}
+.checks{list-style:none;padding:0;margin:1rem 0 1.3rem}
+.checks li{font-size:.72rem;margin-bottom:.5rem;display:flex;gap:.6rem;align-items:center}
+.checks i{color:var(--red);font-size:1rem}
+.cta-r{background:var(--maroon);color:#fff;border-radius:8px;padding:1.6rem 2rem}
+.cta-r i.big{font-size:2.6rem;margin-right:1.2rem}
+.cta-r h6{font-size:.9rem;font-weight:600;margin:0 0 .3rem}
+.cta-r p{font-size:.72rem;margin:0;opacity:.85}
+.cta-r .btn-white{padding:.8rem 2.6rem}
+.site-footer{background:var(--maroon);color:#f0d9db;font-size:.7rem;padding-top:2.2rem}
+.site-footer h6{color:#fff;font-size:.78rem;font-weight:600;margin-bottom:.9rem}
+.site-footer a{color:#f0d9db;display:block;margin-bottom:.55rem}
+.site-footer a:hover{color:#fff}
+.site-footer .brand .name,.site-footer .brand .logo{color:#fff}
+.site-footer .brand small{color:#f0d9db}
+.site-footer .col-f{border-left:1px solid rgba(255,255,255,.15);padding-left:1.4rem}
+.site-footer .soc a{display:inline-block;font-size:1.2rem;margin-right:.9rem;color:#fff}
+.site-footer li{list-style:none;margin-bottom:.5rem;line-height:1.6}
+.site-footer ul{padding:0;margin:0}
+.site-footer i.m{margin-right:.5rem}
+.copy{background:#5e0810;margin-top:1.8rem;padding:.7rem 0;font-size:.66rem}
+.copy a{display:inline;margin:0}
+@media(max-width:991px){.hero2::after{display:none}.hero-img{height:auto}.hero2{padding-bottom:2rem}.site-footer .col-f{border:0;padding-left:.75rem}.feature-strip .col-lg-3+.col-lg-3 .f,.stats .col-lg-2+.col-lg-2 .s{border:0}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+<div class="container d-flex flex-wrap justify-content-between gap-2">
+<div>
+<i class="bi bi-telephone-fill"></i>+233 (0) 245102556 (GH)<span class="sep">|</span>+233 (0) 54 987 7762 (GH)<span class="sep">|</span>+1-773 377 6622 (US)<span class="sep">|</span><i class="bi bi-envelope"></i><a href="mailto:info@asarps.com">info@asarps.com</a><span class="sep">|</span><i class="bi bi-globe2"></i>www.asarps.com</div>
+<div class="social"><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div></div></div>
+
+<nav class="navbar navbar-expand-lg"><div class="container">
+<a class="brand navbar-brand" href="index.html"><i class="bi bi-shield-plus logo"></i><span><span class="name">A-Sarps</span><small>Pharmacy &amp; Cosmetics Limited</small><small class="tag">Quality Drugs for Great Health</small></span></a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse justify-content-end" id="nav"><ul class="navbar-nav align-items-lg-center gap-lg-1">
+<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+<li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+<li class="nav-item"><a class="nav-link" href="customers.html">Our Customers</a></li>
+<li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
+<li class="nav-item"><a class="nav-link" href="why-choose-us.html">Why Choose Us?</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+<li class="nav-item ms-lg-2"><a class="btn btn-brand" href="contact.html"><i class="bi bi-send-fill me-1"></i> Engage Us</a></li></ul></div></div></nav>
+
+<!-- HERO -->
+<section class="hero2"><div class="container"><div class="row align-items-center">
+<div class="col-lg-5 py-4 py-lg-5">
+<div class="eyebrow">Welcome to A-Sarps Pharmacy &amp; Cosmetics Limited</div>
+<h1>Quality Drugs<span>for Great Health</span></h1>
+<p class="lead-s">We are committed to providing high-quality pharmaceutical products and exceptional healthcare services across Ghana and the West Africa Sub-Region.</p>
+<a class="btn btn-brand me-2" href="about.html">Learn More <i class="bi bi-arrow-right ms-1"></i></a><a class="btn btn-outline-brand" href="services.html">Our Services <i class="bi bi-arrow-right ms-1"></i></a></div>
+<div class="col-lg-3 d-none d-lg-block"><div class="hero-img"><img src="images/hero-pharmacist.png" alt="A-Sarps pharmacist"></div></div>
+<div class="col-lg-4"><div class="float-card">
+<div class="row-i"><div class="icon-c"><i class="bi bi-truck"></i></div><span class="t">Pharmaceuticals Imports, Distribution &amp; Wholesaling and Retailing</span></div>
+<div class="row-i"><div class="icon-c"><i class="bi bi-capsule-pill"></i></div><span class="t">Pharmaceutical Compounding &amp; Packaging</span></div>
+<div class="row-i"><div class="icon-c"><i class="bi bi-people"></i></div><span class="t">Clinical Pharmacy Consultancy</span></div></div></div>
+</div></div></section>
+
+<!-- FEATURE STRIP -->
+<div class="container"><div class="feature-strip"><div class="row g-2">
+<div class="col-6 col-lg-3"><div class="f"><div class="icon-c"><i class="bi bi-shield-check"></i></div><div><h6>Quality Products</h6><p>We source and supply only high-quality pharmaceuticals.</p></div></div></div>
+<div class="col-6 col-lg-3"><div class="f"><div class="icon-c"><i class="bi bi-person-badge"></i></div><div><h6>Expert Consultancy</h6><p>Professional clinical pharmacy advisory services.</p></div></div></div>
+<div class="col-6 col-lg-3"><div class="f"><div class="icon-c"><i class="bi bi-truck"></i></div><div><h6>Wide Distribution</h6><p>Efficient distribution across Ghana &amp; West Africa.</p></div></div></div>
+<div class="col-6 col-lg-3"><div class="f"><div class="icon-c"><i class="bi bi-heart-pulse"></i></div><div><h6>Customer Focused</h6><p>Our patients' health and satisfaction come first.</p></div></div></div>
+</div></div></div>
+
+<!-- CORE SERVICES -->
+<section class="section"><div class="container"><h2 class="title-c mb-4">Our Core Services</h2><div class="row g-4">
+<div class="col-lg-4"><div class="svc"><div class="icon-c"><i class="bi bi-truck"></i></div><div><h5>Pharmaceuticals Imports, Distribution &amp; Wholesaling and Retailing</h5><p>We import and distribute a wide range of high-quality pharmaceutical products from reputable global partners.</p><a href="services.html">Learn More <i class="bi bi-arrow-right"></i></a></div></div></div>
+<div class="col-lg-4"><div class="svc"><div class="icon-c"><i class="bi bi-capsule-pill"></i></div><div><h5>Pharmaceutical Compounding &amp; Packaging</h5><p>We compound and package quality pharmaceutical products locally using state-of-the-art equipment and strict quality control.</p><a href="services.html">Learn More <i class="bi bi-arrow-right"></i></a></div></div></div>
+<div class="col-lg-4"><div class="svc"><div class="icon-c"><i class="bi bi-people-fill"></i></div><div><h5>Clinical Pharmacy Consultancy</h5><p>We provide expert advisory support to promote rational use of medicines and improve patient outcomes and well-being.</p><a href="services.html">Learn More <i class="bi bi-arrow-right"></i></a></div></div></div>
+</div></div></section>
+
+<!-- STATS -->
+<div class="container"><div class="stats"><div class="row g-3">
+<div class="col-6 col-lg-2"><div class="s"><i class="bi bi-building"></i><div class="n">10+</div><div class="l">Years of<br>Experience</div></div></div>
+<div class="col-6 col-lg-2"><div class="s"><i class="bi bi-people"></i><div class="n">500+</div><div class="l">Valued<br>Clients</div></div></div>
+<div class="col-6 col-lg-2"><div class="s"><i class="bi bi-box-seam"></i><div class="n">2000+</div><div class="l">Quality<br>Products</div></div></div>
+<div class="col-6 col-lg-2"><div class="s"><i class="bi bi-geo-alt"></i><div class="n">2</div><div class="l">Regions<br>Covered</div></div></div>
+<div class="col-6 col-lg-2"><div class="s"><i class="bi bi-award"></i><div class="n">100%</div><div class="l">Quality<br>Assured</div></div></div>
+<div class="col-6 col-lg-2"><div class="s"><i class="bi bi-hand-thumbs-up"></i><div class="n">100%</div><div class="l">Customer<br>Satisfaction</div></div></div>
+</div></div></div>
+
+<!-- PARTNERS -->
+<section class="section"><div class="container"><h2 class="title-c mb-4">Trusted by Healthcare Partners Across Ghana &amp; West Africa</h2>
+<div class="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-6">
+<div class="col"><div class="partner"><span>Korle-Bu</span><small>Teaching Hospital</small></div></div>
+<div class="col"><div class="partner"><span class="text-danger fs-4">37</span><small>Military Hospital</small></div></div>
+<div class="col"><div class="partner"><span class="text-primary fs-5">NHIS</span><small>National Health Insurance Scheme</small></div></div>
+<div class="col"><div class="partner"><span class="text-danger fst-italic fs-5">Melcom</span><small>Where Ghana Shops</small></div></div>
+<div class="col"><div class="partner"><span>Pharm Access</span><small>Foundation</small></div></div>
+<div class="col"><div class="partner"><span class="text-primary">Pharma Group</span></div></div></div>
+<div class="text-center mt-4"><a class="btn btn-outline-brand" href="customers.html">View All Customers <i class="bi bi-arrow-right ms-1"></i></a></div></div></section>
+
+<!-- ABOUT -->
+<section class="about-s"><div class="container"><div class="row g-4 align-items-center">
+<div class="col-lg-6"><div class="about-img"><!-- Replace with: <img src="images/building.jpg" alt="A-Sarps building"> --><i class="bi bi-building"></i></div></div>
+<div class="col-lg-6 ps-lg-5"><div class="eyebrow">About A-Sarps</div><h2>Committed to Excellence in Pharmaceutical Care</h2>
+<p>A-Sarps Pharmacy &amp; Cosmetics Limited is dedicated to improving lives by providing high-quality pharmaceutical products, reliable distribution, and expert clinical pharmacy services.</p>
+<ul class="checks"><li><i class="bi bi-check-circle-fill"></i>International standards and strict quality control</li><li><i class="bi bi-check-circle-fill"></i>Experienced team of pharmaceutical professionals</li><li><i class="bi bi-check-circle-fill"></i>Serving Ghana and the West Africa Sub-Region</li></ul>
+<a class="btn btn-brand" style="background:var(--maroon)" href="about.html">About Us <i class="bi bi-arrow-right ms-1"></i></a></div></div>
+<div class="cta-r mt-4 d-flex flex-wrap align-items-center justify-content-between gap-3"><div class="d-flex align-items-center"><i class="bi bi-headset big"></i><div><h6>We are ever ready to hear from you</h6><p>Partner with us for quality drugs and reliable healthcare solutions.</p></div></div>
+<a class="btn btn-white" href="contact.html"><i class="bi bi-send-fill me-1"></i> Engage Us Today <i class="bi bi-arrow-right ms-1"></i></a></div></div></section>
+
+<!-- FOOTER -->
+<footer class="site-footer"><div class="container"><div class="row g-4">
+<div class="col-lg-3"><a class="brand" href="index.html" style="display:flex"><i class="bi bi-shield-plus logo"></i><span><span class="name">A-Sarps</span><small>Pharmacy &amp; Cosmetics Limited</small><small class="tag" style="color:#f0d9db">Quality Drugs for Great Health</small></span></a>
+<p class="mt-3 mb-3">Your trusted partner in pharmaceutical products, clinical consultancy and healthcare solutions.</p>
+<div class="soc"><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div></div>
+<div class="col-6 col-lg-2 col-f"><h6>Quick Links</h6><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Our Services</a><a href="customers.html">Our Customers</a><a href="team.html">Our Team</a><a href="why-choose-us.html">Why Choose Us?</a><a href="contact.html">Contact Us</a></div>
+<div class="col-6 col-lg-2 col-f"><h6>Services</h6><a href="services.html">Pharmaceuticals Imports, Distribution &amp; Retailing</a><a href="services.html">Pharmaceutical Compounding &amp; Packaging</a><a href="services.html">Clinical Pharmacy Consultancy</a></div>
+<div class="col-lg-3 col-f"><h6>Our Locations</h6><ul><li><strong class="text-white">Greater Accra Region</strong></li><li><i class="bi bi-geo-alt m"></i>Digital Address: GA 232 3700<br>Kwaffil Building, 3 Kojo Soro Street<br>East Airport, Spintex Accra</li><li class="mt-3"><strong class="text-white">Ashanti Region</strong></li><li><i class="bi bi-geo-alt m"></i>Santase Anyinam, Kumasi<br>P.O. Box 3446, Kumasi – Ghana</li></ul></div>
+<div class="col-lg-2 col-f"><h6>Contact Us</h6><ul><li><i class="bi bi-telephone-fill m"></i>+233 (0) 245102556 (GH)</li><li><i class="bi bi-telephone-fill m"></i>+233 (0) 54 987 7762 (GH)</li><li><i class="bi bi-telephone-fill m"></i>+1-773 377 6622 (US)</li><li class="mt-3"><i class="bi bi-envelope m"></i>info@asarps.com</li><li><i class="bi bi-globe2 m"></i>www.asarps.com</li></ul></div>
+</div></div>
+<div class="copy"><div class="container d-flex flex-wrap justify-content-between gap-2"><span>&copy; 2026 A-Sarps Pharmacy &amp; Cosmetics Limited. All Rights Reserved.</span><span><a href="#">Privacy Policy</a><span class="sep" style="opacity:.4;margin:0 .8rem">|</span><a href="#">Terms &amp; Conditions</a></span></div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script></body></html>
